@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<script src="//philipmjohnson.github.io/ics314f15/morea/underscore/underscore-min.js"></script>
+<script src="contacts.js"></script>
+<body>
+<script>
+    var tempContactList = new contactList();
+
+    var philip = new contact("Philip", "Johnson", "1680 East-West Rd., Honolulu, HI", "96734", "808-956-3489");
+    var henri = new contact("Henri", "Casanova", "1680 East-West Rd., Honolulu, HI", "96734", "808-956-2649");
+    var edo = new contact("Edo", "Biagioni", "1680 East-West Rd., Honolulu, HI", "96734", "808-956-3891");
+    var kim = new contact("Kim", "Binsted", "1680 East-West Rd., Honolulu, HI", "96734", "808-956-6107");
+    console.log(philip.numCalls());
+    philip.call();
+    console.log(philip.numCalls());
+    tempContactList.addContact(philip);
+    tempContactList.addContact(henri);
+    tempContactList.addContact(edo);
+    tempContactList.addContact(kim);
+    console.log(tempContactList.numContacts());
+    console.log(tempContactList.findContact("Casanova"));
+    tempContactList.deleteContact("Philip", "Johnson");
+    console.log(tempContactList.listContacts());
+</script>
+</body>
+</html>
